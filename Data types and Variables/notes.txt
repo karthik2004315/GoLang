@@ -1,0 +1,63 @@
+Datatypes
+---------
+
+1. String: strings are used to represent text and they are surrounded by ("") or ('').
+
+2. Number: It is of two types
+    a) Integer: it can be uint(unsigned integer) or int 
+
+    b) Float: it is of two types "float32" or "float 64"
+
+3. Booleans: it has two values true or false.
+
+4. Arrays: it is an collection of similar data type elements
+
+5. Slices: it is also an container like array but it is more flexible than arrays
+
+6. Maps: these are key value pairs and keys and values can be anything like string or number.
+
+Dynamically vs statically typed languages
+-----------------------------------------
+
+--> Statically typed languages means it throws an error at compile time when used wrong data type ex: cpp, java.
+--> Dynamically typed languages does not enforce data type system ex: python, javascript
+--> both has advantages of their own 
+
+what about GO??
+
+--> go has a concept of data types explicitly declared by programmer or inferred by the compiler
+
+Variables
+---------
+--> variables are used to store the data
+
+syntax:
+   var <variable name> <data type> = <value>
+
+ex:
+    var hi string = "Go"
+
+Print and Println
+-----------------
+--> we can use print or println but using print doesnt give new line whereas println always goes to new line after printing
+--> there is other way we can print too
+
+printf - format specifier
+------------------------
+
+1. %v -- prints the value in default format
+2. %d -- formats integers
+3. %T -- prints the type of the variable
+
+Zero values
+-----------
+when we print and un assigned variable we get a default value or zero value which is different for different types of variables
+
+for string  --> ("")
+for integer --> (0)
+for float   --> (0.0)
+for bool    --> (false)
+
+taking input
+------------
+we use scanf for scanning input values from user we scan it by passing format specifiers

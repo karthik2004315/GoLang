@@ -1,6 +1,6 @@
 # Topics covered
 * Hello Go! 
-*
+* Data types and Variables
 ____________________________________________________________________________
 
 ## Paid resources of learning GoLang
