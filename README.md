@@ -1,4 +1,7 @@
-# Topics covered
+# Golang
+sharing what i am learning everyday. detailed notes is present for every folder
+
+# Topics Covered
 * Hello Go! 
 * Data types and Variables
 ____________________________________________________________________________
