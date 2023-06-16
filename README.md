@@ -4,6 +4,8 @@ sharing what i am learning everyday. detailed notes is present for every folder
 # Topics Covered
 * Hello Go! 
 * Data types and Variables
+* Conditionals
+* Arrays and slices
 ____________________________________________________________________________
 
 ## Paid resources of learning GoLang
