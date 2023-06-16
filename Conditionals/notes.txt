@@ -1,0 +1,66 @@
+operators
+---------
+
+there are 5 types of operators
+
+1. comparision operators  --> (==, !=, <, >, >=, <=)
+2. Logical operators      --> (&&, ||, !)
+3. Assignment operators   --> (=, +=, -=, /=, %=, *=)
+4. Arthimetic operators   --> (++, --, +, -, /, %, *)
+5. Bitwise operators      --> (&, |, <<, >>, ^)
+
+Control Flow
+------------
+
+1.) If-else:
+
+syntax: 
+
+    if condition {
+        <statement>
+    }
+    else if condition {
+        <statement>
+    }
+    else{
+        <statement>
+    }
+
+2.) switch case:
+
+syntax:
+
+    switch expression{
+        case 1:
+            <statement>
+        case 2:
+            <statment>
+        default:
+            <statement>
+    }
+
+--> Fallthrough keyword is used in switch-case when a case is true and if it contains this keywords it goes to the next case even if its true
+--> sometime we can directly right conditionals in cases without expression in switch
+
+
+Looping
+-------
+1.) Looping with for:
+
+syntax:
+
+    for intitalization;condition;updation{
+        // statements
+    }
+
+-->sometimes we can skip intitalization
+
+Example:
+
+    i:=1
+    for i<=5 {
+        fmt.Println(i)
+        i+=1
+    }
+
+--> when a program goes into infinite loop then we use keywords like break and continue to keep the flow
