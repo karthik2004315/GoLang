@@ -1,0 +1,161 @@
+Arrays
+------
+
+--> fixed size
+--> collection of elements of similar data types
+
+Declaration and initialization
+-----------------------------
+
+1.) 
+
+    Example:
+
+        var arr[5] int = [5]int {1, 2, 3, 4, 5}  // first method
+
+        arr := [5]{1, 2, 3, 4, 5} //short hand Declaration
+
+        arr := [...]{1, 2, 3, 4 , 5} //short hand declaration but size of the array is calculated by go
+
+2.) The len() function it is used to know the size of the array
+
+Looping through an array
+-----------------------
+
+1.) general method 
+
+    Example:
+
+        for i =0; i < len(arr); i++{
+            fmt.Println(arr[i])
+        }
+
+2.) range method
+
+    Example:
+
+        for index, element := range arr{
+            fmt.Println(index, "-->", element)
+        }
+
+Multi dimensonal Array
+----------------------
+
+Example of declaration of an multi dimensonal array and initialization of it:
+
+    arr := [2][2]int {{0, 0}, {0, 1}, {1, 0}, {1, 1}}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+Slices
+------
+
+--> variable typed
+--> continous segment of an array
+
+--> slices has 3 properties
+    1.) pointer   --> points to first element in the slice
+    2.) length    --> number of elements of slice
+    3.) capacity  --> number of elements of a slice starting from first element of slice in an underlying array
+
+Declaration and initialization
+------------------------------
+
+1.) first method
+
+Example:
+
+    slice := []int {1, 2, 3} // see we did not specify the size as we did in array
+
+2.) slicing operator
+
+Example:
+
+    slice := arr[1:4]
+
+3.) using make
+
+    syntax:
+
+        make([]<data type, length, capacity)
+
+    Example:
+
+        slice := make([]int, 5, 5)
+
+        // this will create an empty slice of length 5 and capacity 5
+        // we can calculate length of slice by len(slice)
+        // we can calculate the capacity of slice by cap(slice)
+
+--> if we make change in slice underlying array will also change
+
+Append function:
+
+--> if we want to add elements to an slice 
+
+    Example:
+
+        slice1 := append(slice, <elements>)
+
+--> if we want to add slice to another slice
+
+    Example:
+
+        slice_comb := append(slice1, slice2...)
+
+copy function:
+
+syntax:
+
+    copy(destination, source)
+
+Example:
+
+    copy(slice1, slice2) // so slice2 is copied into slice1
+
+Looping
+-------
+
+--> we use range method from Arrays
+
+    Example:
+
+        for _, value := range slice{
+            fmt.Println(value)
+        }
+        // notice we replaced index with an underscore we did that because we dont want an index to be returned
+    
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Maps
+----
+
+--> unordered collection of key value pairs, it is implemented using hash table
+
+Declaration and initialization
+------------------------------
+--> it should be done simultaneosly
+
+Example:
+
+    mapps := map[int]int {1: 10, 2: 20, 3: 30}
+                  ^   ^
+                  |   |
+                 key  value
+
+--> we can declare an map using make function
+
+Example:
+ 
+   mapps := make(map[int]string)
+
+--> we can access a map like mapps[1] it will return 10 because value of 1 is 10 and remember it return 2 values which are 
+    value and found
+
+--> we can delete a key value pair by using delete function
+
+    Ex:
+
+        delete(mapps, 1) // so this deletes the key value pair (1, 10)
