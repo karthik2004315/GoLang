@@ -19,7 +19,7 @@
 
 syntax: 
 
-    ```
+    ```goroutine
     go <function name>
     ```
 * here we used a special keyword called go when we used it is considered as go routine
