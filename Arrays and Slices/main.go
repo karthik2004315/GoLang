@@ -1,3 +1,4 @@
+// Do check the notes once
 package main
 
 import "fmt"
