@@ -11,3 +11,15 @@
  * **Multi processing system** : let us say there are two processes and two cpus now these two cpus are working in a way like both cpu execute both processes by exchanging in between them. this is called Multi processing system
  * **Parallel processing** : by taking same example as above where as here two cpus execute one process each parallelly
  ![concVSparallel](https://th.bing.com/th/id/OIP.YodILe1zI4wCSo_vVDrdCQHaEo?w=287&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7)
+----------------------------------------------------------------------------------------------------------------------------
+
+### Go routines
+
+* it is considered as light weight thread in which every go routine executes independently. other go routines will execute concurrently. these go routines are managed by Go runtime scheduler
+
+syntax: 
+
+    ```
+    go <function name>
+    ```
+* here we used a special keyword called go when we used it is considered as go routine
