@@ -1,0 +1,104 @@
+Functions
+---------
+
+--> reusable parts of code what more can i say all of you know what functions are
+
+syntax:
+
+    function <function name> <params> <return type>{
+        // statement
+    }
+
+Example:
+
+    function mul (a int, b int) int{
+        total := a*b
+        return mul
+    }
+
+Function Return Types
+---------------------
+
+--> we can pass multiple parameters and can return multiple parameters
+
+--> we can return multiple parameters in two ways
+
+1.)
+
+    Example:
+
+            func add(a int, b int) (c int, d int){
+                // statements of c and d
+                return;
+            }
+
+2.) 
+ 
+    Example:
+
+        func add(a int, b int) (int, int){
+            // here we declare two variables by using shorthand operator lets say they are c and d
+            return c, d;
+        }
+
+--> so in both ways we can return multiple values at once
+
+Variadic functions
+------------------
+
+--> by using variadic functions we can get variable type of input params
+
+syntax:
+
+    func <function name>(param ...<type>) int{
+        // Statements
+    }
+
+Example:    
+
+    func factorial(nos ...int)int{
+        mul := 1
+        for _,val :=range nos{
+            mul *= val
+        }
+        return mul
+    }
+
+--> in above example we are ranging over nos array when we declare a param with (...) it is an array
+--> previously we used '_'. but we didnt know what it is right. it ignores the values returned when using range keyword
+
+* same like other languages we can apply recursions to functions
+
+Anonymous functions
+-------------------
+
+--> A Anonymous function is a function which doesnt have a name identifier
+
+Example:
+
+    mul := func(x int)int{
+            return x*x
+    }
+
+    fmt.Println(mul(5)) // this gives an output of 25-
+
+--> or we can declare it in another ways
+
+Example:
+
+    mul := func(x int)int{
+        return x*x
+    }(5)
+
+    fmt.Println(mul) // this returns 25 simply notice we havent called mul with 5 its because we declared 5 at end of anomymous function
+
+
+High order function
+-------------------
+
+--> it means we return and pass functions as parameters
+
+Defer statement
+---------------
+--> when we use it before a fuction we it delays the execution function until the execution of surrounding functions are completed
+
