@@ -7,6 +7,8 @@ sharing what i am learning everyday. detailed notes is present for every folder
 * Conditionals
 * Arrays and slices
 * Functions
+* Pointers
+* Structures and beyond
 ____________________________________________________________________________
 
 ## Paid resources of learning GoLang
