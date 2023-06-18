@@ -6,6 +6,7 @@ sharing what i am learning everyday. detailed notes is present for every folder
 * Data types and Variables
 * Conditionals
 * Arrays and slices
+* Functions
 ____________________________________________________________________________
 
 ## Paid resources of learning GoLang
