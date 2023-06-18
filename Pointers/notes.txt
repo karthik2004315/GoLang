@@ -1,0 +1,27 @@
+pointers
+--------
+
+--> pointers are variables which store address of another variable it points to address of that variable
+--> if we want an address of an variable we use (&) before the variable
+--> if we want the value of an address of that variable we use (*)
+
+Declaration:
+
+    var <pointer name> *<data type> = &(another variable)
+
+or
+
+    var ptr = &(another variable)
+
+or
+    
+    ptr := &(another variable)
+
+Passing by value:
+--> whenever we want update a value by using a function, when we use direct variables without pointers it doesnt update because the scopes of these variable is different
+
+passing by reference:
+
+--> but when we use concept of pointers we can update the value of variable without returning anything 
+--> and for slices we doesnt need pointers it will change by default
+--> same as slices maps doesnt need the concept of pointers

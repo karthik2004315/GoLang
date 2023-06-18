@@ -1,0 +1,90 @@
+structures
+----------
+--> structures are user defined data types
+--> it is used to group number of data elements
+
+Declaration and initialization
+------------------------------
+
+syntax:
+
+    type <struct name> struct{
+
+        // list of fields
+
+    }
+
+Example:
+
+    type fruits struct{
+        price int
+        color string
+    }
+
+we can initialize the structures by doing this
+
+1.) normal way
+
+    syntax:
+        var <name> <structure>
+ 
+    Example:
+
+            var s structure
+
+2.) shorhand declaration
+
+    syntax:
+        <variable name> := new(<declared structure name>)
+
+3.) shorthand declaration parttwo
+
+    syntax:
+        <variable name := <struct name>{
+            <field name> = value,
+            <field name> = value,
+        }
+    
+Accessing
+---------
+
+--> to access the elements of a structure we will use (.) for accessing values
+
+Example:
+
+        Fruits.color = "orange"
+
+--> we can pass structures to functions by passing a address of structure variable
+
+comparing two structures
+------------------------
+--> we can compare two structs of same type but cannot compare structs of different type
+
+Methods
+-------
+
+--> method is also a function but with small change when declaring a method we use an extra argument between func keyword and function name
+
+syntax:
+
+    function <reciver> <function name> (){
+        // statments
+    }
+
+method sets 
+-----------
+--> it is a set of methods. it is used to encapsulate functionality
+
+Interfaces
+----------
+
+--> interfaces specifies method sets. and its a powerful way for modularity in go
+
+syntax:
+
+    type <interface name> interface{
+        // method signatures
+    }
+
+--> a type implements an interface by implementing its keywords
+--> the go language interfaces are implented implicitly. and it does not have a specific keyword to implement it
