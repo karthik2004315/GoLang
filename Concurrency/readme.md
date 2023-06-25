@@ -74,3 +74,122 @@ Some examples of context switching: Function calls, on using go keyword etc..
 ### Wait Groups
 
 * The main problem with Go routines is the main program is being terminated before the Go routines are completed.
+* This package acts like a counter and it blocks the execution in structured way until its internal counter becomes 0
+
+syntax:
+
+    ```
+    import "sync"
+
+    var <name> sync.WaitGroup
+    ```
+* we have three methods in wait group
+    * **wg.Add(int)** - this indicates the number of available go routines to wait for. integer param is a counter
+    * **wg.Wait()**   - this blocks the execution of code until the internal counter reduced to 0
+    * **wg.Done()**   - this decreases the internal counter by 1
+* lets see how that works lets say we have 2 go routines so we will call add method with param 2 **wg.Add(2)** now we will 
+ call wait method to block the execution of main method **wg.Wait()** now we can execute go routines.
+* when we called add method we have internal counter of count = 2 now when 1 go routine finished it calls **wg.Done()** method then internal counter count = 1 then second go routine finishes and internal count reduces to 0 so now the main method is executed
+* this is all about wait groups
+
+### Channels
+
+* Channels are means through which go routines communicate
+* it is bidirectional by default means we can send or recieve values from channels
+syntax:
+
+```
+var c chan int
+```
+* what we did is we created a channel called "c" and of type integer
+* channels as many operations such as 
+    * recieve a value
+    * send a value
+    * closing a channel
+    * querying buffer over a channel
+    * querying length of a channel
+* #### sending a value over a channel:
+
+    syntax:
+    ```
+        ch <- v
+    ```
+    * "<-" this is send operator
+* #### recieving a value over a channel
+
+    syntax:
+    ```
+    val := <- v
+    ```
+    * this is same as sending a value but we are recieving a value so we have to assign it to a variable
+* #### closing a channel
+
+    syntax:
+    ```
+    close(ch)
+    ```
+* #### querying a buffer of a channel
+
+    syntax:
+    ```
+    cap(ch)
+    ```
+* #### querying length of the buffer of a channel
+
+    syntax:
+    ```
+    len(ch)
+    ```
+* channels are two types buffered and unbuffered
+    * **UnBuffered channels**: the channel that needs a reciever as soon as a message is emitted to the channel, no capacity to hold, do not stores data
+
+    * ** Buffered channels** : it has a capacity to hold the data
+        * sending to a channel blocks the go routine, only if the buffer is full
+        * recieving from a channel blocks only when a channel is empty 
+
+syntax of a buffered channel:
+    ```
+        ch := make(chan <data type>, capacity)
+    ```
+Example:
+    ```
+        ch := make(chan int, 10)
+    ```
+* length of a unbufferd channel is always 0
+* closing a channel means no more data can be sent to that channel and we can do that by using inbuilt function close()
+* we can check if a channel is closed or not by assigning second variable when recieving data
+    Example:
+        ```
+        val, ok := <- ch
+        ```
+### Panic situations
+* panic situation is like an exception it occurs at runtime
+* some panic situations are like
+    * when closing a closed channel
+    * when sending a data to a closed channel
+
+* we can accept values of a channel by using for - range method also
+
+### Select statement
+* select statement is like a switch statement
+* it lets a go routine wait on multiple communication operations
+* in select each of the case statement waits for sending or recieving data from a channel
+syntax:
+```
+select{
+    case channel send  or recieve:
+        //statement
+    case channel send or recieve:
+        // statement
+    default: 
+        // statement
+}
+```
+### Go routines leaks
+* whenever we declared a go routine we must make sure that it is terminated or it occupies memory and its memory is reserved. this kind of memory leak is called go routine leak
+
+### concurrency practices
+* whenever we use closures we have to make sure that value passed to the go routine or function should be as a parameter not like scope variable because go routines follow parallelism and they may start execution after certain point of time and we may get another value as output
+
+* the main problem is when to use buffered channel and unbuffered channel. so buffered channels are useful when you know how many go routines you have launched, and want to limit the go routines you have launched, or want to limit the amount of work queued up
+* **Time out code**: most interactive programs should return the response within a certain time so to achieve that we use time out code that is we only block the code for certain period of time and it can be achieved by using "After" function the time package 
