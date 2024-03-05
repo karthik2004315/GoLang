@@ -2,7 +2,7 @@
 sharing what i am learning everyday. detailed notes is present for every folder
 
 # Topics Covered
-#### Basic GoLang
+#### Basic Concepts
 * Hello Go! 
 * Data types and Variables
 * Conditionals
@@ -10,7 +10,7 @@ sharing what i am learning everyday. detailed notes is present for every folder
 * Functions
 * Pointers
 * Structures
-#### Advanced GoLang
+#### Advanced Concepts
 * Concurrency
 ____________________________________________________________________________
 
