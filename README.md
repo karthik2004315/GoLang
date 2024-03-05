@@ -2,13 +2,16 @@
 sharing what i am learning everyday. detailed notes is present for every folder
 
 # Topics Covered
+#### Basic GoLang
 * Hello Go! 
 * Data types and Variables
 * Conditionals
 * Arrays and slices
 * Functions
 * Pointers
-* Structures and beyond
+* Structures
+#### Advanced GoLang
+* Concurrency
 ____________________________________________________________________________
 
 ## Paid resources of learning GoLang
