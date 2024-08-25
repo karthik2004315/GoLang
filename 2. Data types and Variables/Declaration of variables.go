@@ -23,5 +23,5 @@ func main(){
 
 	// fourth way 
 
-	type := "fruit"
+	FruitType := "orange"
 }
